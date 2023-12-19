@@ -1,0 +1,1294 @@
+/* Jeg resetter min css kode*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* ---------------- CSS starter her ------------------ */
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Helvetica, sans-serif;
+    background-color: #ffff;
+  }
+  
+  a {
+    color: #2c2c2c;
+    text-decoration: none;
+  }
+
+  /*-------------- Forside billede ----------*/
+  .forside-billede{
+    max-width: 100%;
+    position: absolute;
+    z-index: -1;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #494949;
+  }
+  
+  /* ------------------------ header med burgermenu ---------------------------- */
+  .front-page .logo h1{
+    color: #fff;
+  }
+  .front-page .logo h2{
+    color: #fff;
+  }
+  
+  .logo h1{
+    position: absolute;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    color: #2c2c2c;
+    padding-left: 20px;
+    padding-top: 10px;
+
+  }
+  .logo h2{
+    position: absolute;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    padding-left: 124px;
+    color: #2c2c2c;
+    padding-top: 10px;
+  }
+
+  .scroll{
+    display: none;
+  }
+
+  .logo-undersider {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    padding-left: 10px;
+  }
+  
+  .header {
+    background-color: #fff;
+    width: 100%;
+    z-index: 3;
+    border-bottom: 1px solid #494949;
+  }
+  
+  .header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #fff;
+  }
+  
+  .header li a {
+    display: block;
+    padding: 20px 20px;
+    text-decoration: none;
+    text-align: center;
+    font-family: Garamond;
+  }
+  
+  .header li a:hover,
+  .header .menu-btn:hover {
+    background-color: #f4f4f4;
+  }
+  
+  /* menu */
+  
+  .header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+  }
+
+  /*submenu*/
+
+  .submenu {
+    border: none;
+  }
+  .menu li{
+    position: relative;
+  }
+  .menu li ul {
+    display: none;
+    position: relative;
+    background-color:#dedede;
+    width: 100%;
+}
+
+  .menu li:hover ul {
+    display: block;
+}
+
+  .menu li ul li {
+    float:none; 
+    position: relative;
+}
+
+.menu li ul li a{
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+}
+
+
+  /* menu icon */
+  .header .menu-icon {
+    cursor: pointer;
+    padding: 28px 20px;
+    position: relative;
+    float: right;
+    user-select: none;
+  }
+  
+  .header .menu-icon .navicon {
+    background: #fff;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: 0.5s ease-out;
+    width: 25px;
+    cursor: pointer;
+  }
+  
+  .header .menu-icon .navicon:before,
+  .header .menu-icon .navicon:after {
+    background: #ffff;
+    content: '';
+    position: absolute;
+    height: 100%; 
+    transition: all 0.5s ease-out;
+    width: 100%;
+  }
+  
+  .header .menu-icon .navicon:before {
+    top: 5px;
+  }
+  
+  .header .menu-icon .navicon:after {
+    top: -5px;
+  }
+
+  /* Styles for the white menu icon */
+.header .menu-icon.white-menu .navicon {
+  background: #fff;
+}
+
+.header .menu-icon.white-menu .navicon:before,
+.header .menu-icon.white-menu .navicon:after {
+  background: #fff;
+}
+
+/* Styles for the grey menu icon */
+.header .menu-icon.grey-menu .navicon {
+  background: #2c2c2c;
+}
+
+.header .menu-icon.grey-menu .navicon:before,
+.header .menu-icon.grey-menu .navicon:after {
+  background: #2c2c2c;
+}
+
+.funktioner img {
+  display: none;
+}
+  
+  /* menu btn */
+  
+  .header .menu-btn {
+    display: none;
+  }
+  
+  .header .menu-btn:checked ~ .menu {
+    max-height: 280px;
+    
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+  }
+  
+  .menu-punkt {
+    text-align: center;
+  }
+
+  .sog-image,
+  .kurv-image {
+    display: none;
+  }
+
+  /*--------- Forside nyhed ---------*/
+  .nyhed{
+    display: block;
+  }
+  .nyhed h3{
+    padding-top: 250px;
+    font-size: 50px;
+    color: #000;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  .flasker{
+    text-align: center;
+  }
+
+  .flasker img{
+    max-width: 50%;
+  }
+
+  .nyhed p{
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    line-height: 1.4;
+  }
+
+  .seprodukter img{
+    max-width: 25%;
+    padding-top: 30px;
+    padding-left:150px;
+  }
+
+  .natur img{
+    max-width: 100%;
+    border-top: 1px solid #494949;
+    border-bottom: 1px solid #494949;
+  }
+
+  .natur{
+    padding-bottom: 60px;
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+  }
+
+  .rekke-et{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .mennesker{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+  }
+
+  .lokalt{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 50px;
+    color: #2c2c2c;
+  }
+
+  /*---------- Footer --------*/
+  .footer{
+    background-color: #2c2c2c;
+    padding-top: 20px;
+    height: 120px;
+  }
+
+  .footer-row{
+    display: flex;
+    flex-direction: row;
+    color: #dedede;
+    font-size: 12px;
+    line-height: 1.2;
+  }
+  .find{
+    width: 300px;
+    padding-left: 10px;
+  }
+  .find h4{
+    font-size: 15px;
+    padding-bottom: 10px;
+  }
+
+  .kontakt h4{
+    font-size: 15px;
+    padding-bottom: 10px;
+  }
+
+  .genbrug img{
+    width: 70px;
+    height: auto;
+  }
+
+  .genbrug{
+    display: flex;
+    justify-content: right;
+  }
+
+  /*------- Produkter ---------*/
+  .overskrift h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-weight: bold;
+  }
+
+  .overskrift p{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: center;
+    padding-bottom: 30px;
+  }
+
+  .produkter {
+    display: flex;
+  }
+
+  .column a img {
+    max-width: 130px;
+    height: auto;
+    padding-left: 40px;
+  }
+
+  .column {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .winter{
+    padding-top: 14px;
+  }
+
+  .westcoast{
+    padding-top: 14px;
+  }
+
+  .christmas{
+    padding-top: 12px;
+  }
+
+  
+  .column a {
+    flex-basis: calc(50% - 10px);
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  .column a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .column a:hover::before {
+    opacity: 1;
+  }
+  
+  .column a:hover img {
+    transform: scale(1.1);
+  }
+  
+
+  /*------- Produkt undersider -------*/
+  .ipa-overskrift{
+    text-align: center;
+    padding-top: 50px;
+  }
+  
+  .ipa-overskrift h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    color: #e49d40;
+  }
+  .ipa-overskrift p{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+  }
+  
+  .storIPA {
+    max-width: 12%;
+  }
+  
+  .forhold img{
+    max-width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 40px;
+    padding-top: 20px;
+  }
+
+  .forhold p{
+    border-bottom: 1px solid #494949;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+    margin-top: -20px;
+  }
+
+  .forhold{
+    padding-bottom: 100px;
+  }
+
+  /*------ Kampagner -------*/
+  .kampagner{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    z-index: -1;
+    position: absolute;
+  }
+
+  .kampagner h1{
+    color: #9c1010;
+    font-weight: bold;
+    font-size: 30px;
+    padding-top: 30px;
+    padding-bottom: 25px;
+  }
+
+  .kampagner p{
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    line-height: 30px;
+  }
+
+  .flaskebaggrund{
+    position: relative;
+    z-index: -1;
+  }
+
+  .flaskebaggrund img{
+    max-width: 100%;
+    display: block;
+    padding-bottom: 400px;
+  }
+
+  /*------- En verden at opdage, kampagne --------*/
+  .en-verden{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    padding-top: 30px;
+  }
+
+  .en-verden h1{
+    font-size: 30px;
+    font-weight: bold;
+    padding-bottom: 10px;
+  }
+
+  .en-verden p{
+    font-size: 20px;
+    padding-bottom: 20px;
+  }
+  
+  .sigja img{
+    max-width: 80%;
+    padding-bottom: 160px;
+    padding-top: 50px;
+  }
+  
+
+  /*------ Kør sikkert, kampagne -------*/
+.korsikkert h1{
+  font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    padding-top: 30px;
+    font-size: 30px;
+    font-weight: bold;
+    padding-bottom: 30px;
+}
+
+.korsikkert p{
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+  font-size: 20px;
+  padding-bottom: 100px;
+}
+
+  .korsikkert img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    padding: 0 0 90px 120px;
+  }
+
+  /*-------- Om os ---------*/
+  .om-os{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 20px;
+    line-height: 1.5;
+  }
+
+  .flaske-ol img{
+    max-width: 50%;
+  }
+
+  .om-os h1{
+    padding-bottom: 20px;
+  }
+  .om-os p{
+    font-size: 20px;
+    font-weight: lighter;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+  }
+
+
+  /*-------- Værdier ----------*/
+.verdi-billeder{
+  padding: 0 15px 0 15px;
+}
+
+.verdi-billeder img{
+  max-width: 30%;
+}
+
+  .malt{
+    border: 1px solid;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 50px;
+    padding-top: 20px;
+  }
+
+  .malt p{
+    font-size:16px;
+    text-align: left;
+  }
+
+  .innovation{
+    border: 1px solid;
+    padding-top: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+
+  .innovation .content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  .innovation img {
+    max-width: 110px;
+    margin-right: 10px;
+    order: -1;
+  }
+
+  .innovation p{
+    font-size:16px;
+    text-align: left;
+  }
+
+  .sundhed{
+    border: 1px solid;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+
+  .sundhed p{
+    font-size:16px;
+    text-align: left;
+  }
+
+  .fellesskab{
+    border: 1px solid;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+  .fellesskab .content {
+    display: flex;
+    align-items: center;
+  }
+  
+  .fellesskab img {
+    max-width: 110px;
+    margin-right: 10px;
+  }
+
+  .fellesskab p{
+    font-size:16px;
+    text-align: left;
+  }
+
+  .verden p{
+    text-align: center;
+  }
+
+  .verden img{
+    max-width:20%;
+    padding-bottom: 50px;
+  }
+
+/*-------- Bæredygtighed -------*/
+  .beredygtighed{
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 30px;
+  }
+
+
+
+  .miljo-billeder p{
+    font-size: 13px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    position: absolute;
+    padding-top: 25px;
+    
+  }
+
+  .miljo-billeder{
+    text-align: center;
+    padding-bottom: 180px;
+  }
+
+  .miljo-billeder img{
+    max-width: 100%;
+    height: auto;
+    padding-bottom: 30px;
+  }
+
+  .genanvendt p{
+    margin-top: -10px;
+  }
+
+  /*-------- Kontakt --------*/
+  .kontakt-side{
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.4;
+    padding-left: 60px;
+    padding-top: 30px;
+    
+  }
+
+  .kontakt-side h1{
+    font-size: 30px;
+    font-weight: bold;
+    padding-bottom: 10px;
+  }
+
+  .kontakt-side h2{
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 20px;
+  }
+
+  .kontakt-side p{
+    font-size: 20px;
+  }
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 4px;
+    resize: vertical;
+    background-color: #494949;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  #subject{
+    height: 200px;
+  }
+  
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+  
+  input[type=submit] {
+    background-color: #494949;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    margin-right: 60px;
+  }
+  
+  input[type=submit]:hover {
+    background-color: black;
+  }
+
+  .col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+  
+  .col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+  }
+
+  .row::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .container{
+    padding-bottom: 30px;
+  }
+
+  /*-------- Tak --------*/
+  .tak-side{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    line-height: 1.5;
+    padding: 30px 20px 0 20px;
+  }
+
+  .tak-side h1{
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  .tak-side p{
+    font-size: 20px;
+  }
+
+  .tak-flasker img{
+    max-width: 100%;
+    padding: 50px 0 80px 0;
+  }
+
+
+  /* Media - computer */
+  @media (min-width: 768px) {
+    
+    /* header, desktop */
+    .header {
+      margin-bottom: auto;
+    }
+    .header li {
+      float: left;
+      font-size: 20px;
+    }
+    .header li a {
+      padding: 20px 30px;
+      justify-content: center;
+    }
+    .header .menu {
+      clear: none;
+      max-height: none;
+    }
+
+    .scroll{
+      display: block;
+      border-bottom: none;
+      position: absolute;
+      z-index: 1;
+      top: 730px;
+      max-width: 60px;
+      left: 810px;
+    }
+
+    .funktioner {
+      display: flex;
+      flex-direction: row-reverse;
+      margin-top: -60px;
+    }
+    
+    .funktioner img {
+      display: block;
+      padding: 10px;
+      padding-right: 20px;
+      width: 40px;
+      height: auto;
+    }
+    
+    .header .menu-icon {
+      display: none;
+    }
+ 
+    .front-page h1{
+      font-size: 240px;
+      padding-top: 160px;
+      text-align: center;
+      padding-left: 300px;
+    }
+
+    .front-page h2{
+      font-size: 200px;
+      padding-top: 360px;
+      text-align: center;
+      padding-left: 900px;
+    }
+
+    .logo{
+      display: block;
+      position: absolute;
+      z-index: 2;
+    }
+
+    .menu {
+      display: flex;
+    }
+
+    .menu li ul {
+      border-bottom: none;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .menu-punkter{
+      margin-right: 400px;
+    }
+
+    .forside-page{
+      display: flex;
+      justify-content:space-between;
+    }
+
+    .forside-page li{
+      display: flex;
+      justify-content: space-between;
+      position:relative;
+      z-index: 2;
+    }
+
+    .forside-page a{
+      color:#fff;
+      font-weight: bold;
+      font-size: 30px;
+    }
+
+    .other-pages{
+      justify-content: center;
+    }
+
+    .forside-billede{
+      display: block;
+      border-bottom: none;
+      position: absolute;
+      z-index: 1;
+    }
+
+    .nyhed{
+      padding-top: 900px;
+    }
+
+    .flasker img{
+      padding-right: 30px;
+      max-width: 100%;
+      padding-top: 10px;
+    }
+
+    .text{
+      padding-left: 50px;
+      padding-bottom: 40px;
+    }
+
+    .text p{
+      padding-bottom: 20px;
+    }
+
+    .seprodukter{
+      padding-bottom: 20px;
+      margin-left: -150px;
+    }
+
+    .natur {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .natur img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .mennesker img{
+      margin-top: -265px;
+    }
+ 
+    /*-------- Footer, desktop ---------*/
+    .footer{
+      padding: 30px;
+    }
+
+    .footer-row{
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .genbrug{
+      margin-top: -40px;
+    }
+    
+    /*------- Produkter, desktop --------*/
+    .container {
+      margin: 0 auto;
+    }
+
+    .overskrift{
+      text-align: left;
+    }
+
+    .produkter{
+      padding-left: 250px;
+    }
+
+    .content {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    
+    .content{
+      padding-left: 70px;
+    }
+
+    .text p{
+      text-align: left;
+      font-size: 30px;
+      padding-top: 100px;
+    }
+
+    .christmas{
+      margin-top: -14px;
+    }
+
+    .westcoast{
+      margin-top: -14px;
+    }
+
+    /*------ Produkt underside, desktop --------*/
+    .forhold{
+      max-width: 40%;
+      padding-left:200px;
+    }
+
+    .ipa-overskrift{
+      text-align: left;
+      padding-left: 200px;
+    }
+
+    .ipa-overskrift p{
+      margin-left: -20px;
+      padding-top: 20px;
+      font-size: 25px;
+    }
+
+    .ipa-content {
+      display: flex;
+    }
+    
+    .ipa-text {
+      flex: 1;
+    }
+    
+    .image-container {
+      margin-left: 20px;
+    }
+
+    .storIPA{
+      max-width: 35%;
+      padding-top: 400px;
+      padding-right: 200px;
+    }
+
+    /*------ Kampagner, desktop ------*/
+    .flaskebaggrund img{
+      padding-left: 200px;
+      height: 50%;
+      justify-content: flex-end;
+    }
+
+    .kampagner h1{
+      font-size: 50px;
+      text-align: left;
+      padding-left: 300px;
+    }
+
+    .kampagner p{
+      font-size: 25px;
+      line-height: 2;
+      text-align: left;
+      padding-left: 300px;
+      padding-right: 300px;
+    }
+
+    /*------ Sig ja, desktop -------*/
+    .sigja {
+      max-width: 40%;
+      padding-left: 500px;
+    }
+
+    .en-verden p{
+      font-size: 30px;
+    }
+
+    /*------- Kør sikkert, desktop -------*/
+    .korsikkert img{
+      max-width: 70%;
+      padding-left: 400px;
+    }
+
+    .korsikkert p{
+      font-size: 20px;
+      padding-left: 10px;
+    }
+
+    
+
+    /*-------- Om os, desktop -------*/
+    .flaske-ol img{
+      max-width: 40%;
+      margin-top: -650px;
+      padding-left: 500px;
+      padding-bottom: 100px;
+    }
+
+    .flaske-ol {
+      display: flex;
+      justify-content: flex-end;
+      order: 2;
+      margin-left: 20px;
+    }
+    
+    .omos-container{
+      display: flex;
+    }
+
+    .omos-content{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    }
+
+    .om-os {
+      order: 1;
+      z-index: 2;
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .om-os p {
+      text-align: left;
+      font-size: 25px;
+      max-width: 50%;
+      padding-left: 70px;
+      padding-bottom: 100px;
+      margin-right: auto; 
+      line-height: 2;
+    }
+    
+
+    /*------- Værdier, desktop -------*/
+    .malt{
+      max-width: 60%;
+      height: auto;
+    }
+
+    .malt p{
+      padding-top: 40px;
+    }
+
+    .innovation {
+      display: flex;
+      justify-content: flex-end;
+      margin-left: 600px;
+    }
+
+    .innovation img{
+      max-width: 300px;
+    }
+
+    .innovation p{
+      padding-top: 40px;
+    }
+
+    .sundhed{
+      max-width: 60%;
+      height: auto;
+    }
+
+    .sundhed p{
+      padding-top: 40px;
+    }
+
+    .fellesskab{
+      display: flex;
+      justify-content: flex-end;
+      margin-left: 600px;
+    }
+
+    .fellesskab img{
+      max-width: 300px;
+    }
+    
+    .fellesskab p{
+      padding-top: 40px;
+    }
+
+
+    .verden p {
+      text-align: center;
+      padding-top: 50px;
+      padding-left: 350px;
+    }
+
+    /*-------- Bæredygtighed, desktop --------*/
+    .miljo-billeder p{
+      font-size: 27px;
+      margin-top: 120px;
+      text-align: center;
+    }
+
+    .miljo p{
+      padding-left: 120px;
+    }
+
+    .genanvendt {
+      position: relative;
+    }
+    
+    .genanvendt p {
+      position: absolute;
+      padding-left: 300px;
+      top: -60px;
+    }
+    
+
+    .recycle p{
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+
+    .forbruger p{
+      padding-left: 300px;
+    }
+
+    /*------- kontakt, desktop -------*/
+    .kontakt-side h1{
+      padding-left: 190px;
+      padding-bottom: 50px;
+    }
+    .kontakt-side h2{
+      display: flex;
+      justify-content: center;
+      padding-left: 620px;
+    }
+
+    .kontakt-side p{
+      display: flex;
+      justify-content: center;
+      padding-left: 570px;
+      margin-bottom: -200px;
+    }
+
+    .row{
+      width: 70%;
+    }
+
+    .container{
+      padding-left: 190px;
+    }
+
+    input[type=submit]{
+      margin-right: 210px;
+    }
+  }
